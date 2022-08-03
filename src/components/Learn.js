@@ -211,8 +211,8 @@ function Learn() {
 
     return (
         <>
-            <div className="d-flex program">
-                <div className="program-types d-flex flex-column">
+            <div className="program">
+                <div className="program-types">
                     {programs.map((text, i) => {
                         return (
                             <p
@@ -243,7 +243,7 @@ function Learn() {
                         );
                     })}
                 </div>
-                <div className="right text-center ms-auto me-auto">
+                <div className="right text-center ms-auto mt-5 me-auto">
                     <h3>{programTagLine[activeProgram].headline}</h3>
                     <p>{programTagLine[activeProgram].subHeading}</p>
 
@@ -252,7 +252,7 @@ function Learn() {
                             <i className="fa-solid fa-angle-left"></i>
                         </p>
                         {activeProgram === 3 ? (
-                            <div className="d-flex gap-5 mt-4">
+                            <div className="community-program d-flex gap-5 mt-4">
                                 {programCards[3].map((card, i) => {
                                     return (
                                         <div
@@ -314,7 +314,12 @@ function Learn() {
                             </div>
                         ) : (
                             <Swiper
-                                // breakpoints={}
+                                breakpoints={{
+                                    690: { slidesPerView: 2 },
+                                    200: {
+                                        slidesPerView: 1,
+                                    },
+                                }}
                                 style={{ padding: "40px" }}
                                 autoplay={{
                                     disableOnInteraction: false,
@@ -411,7 +416,9 @@ function Learn() {
                     </div>
                 </div>
             </div>
-            <p className="text-center">View More</p>
+            <p role={"button"} className="text-center">
+                View More
+            </p>
         </>
     );
 }

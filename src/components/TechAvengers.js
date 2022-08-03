@@ -43,7 +43,7 @@ function TechAvengers() {
             name: "Navin Reddy",
             role: "Senior VP",
             socialLink: { linkedin: "", youtube: "" },
-            profileImage: require("../assets/hitesh-square.png"),
+            profileImage: require("../assets/telusko-square.png"),
         },
         {
             name: "Mukesh Otwani",
@@ -91,7 +91,13 @@ function TechAvengers() {
                 </p>
 
                 <Swiper
-                    // breakpoints={}
+                    breakpoints={{
+                        1058: { slidesPerView: 3 },
+                        690: { slidesPerView: 2 },
+                        200: {
+                            slidesPerView: 1,
+                        },
+                    }}
                     style={{ padding: "80px 80px" }}
                     autoplay={{
                         disableOnInteraction: false,

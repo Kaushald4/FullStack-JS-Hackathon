@@ -14,7 +14,11 @@ function HallFame() {
                 <i className="fa-solid fa-angle-left"></i>
             </p>
             <Swiper
-                // breakpoints={}
+                breakpoints={{
+                    1058: { slidesPerView: 3 },
+                    690: { slidesPerView: 2 },
+                    200: { slidesPerView: 1, parallax: { enabled: true } },
+                }}
                 style={{ padding: "40px" }}
                 autoplay={{
                     disableOnInteraction: false,
@@ -35,22 +39,57 @@ function HallFame() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <HallFameCard />
+                    <HallFameCard
+                        bio={`I have enrolled for your ML course two years back , Python you taught in that course was awesome due to which I have cracked about 5 interview..."
+                        `}
+                        jobTitle="Cognizant(genc next) ,Coditas , Celebal, Capgemini, Atos"
+                        name="Chitra Patgar"
+                        profileImage={require("../assets/persons/5.jpeg")}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <HallFameCard />
+                    <HallFameCard
+                        name={"Sameer Kumar"}
+                        bio={`Hello everyone,
+                        My name is Sameer Kumar and I am a final year B.Tech student from Symbiosis Institute of Technology, Pune.                                                                                                              
+                        I recently got placed at Bajaj Finserv as a Data Scientist
+                        `}
+                        jobTitle="Bajaj Finserv"
+                        profileImage={require("../assets/persons/2jpeg.jpeg")}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <HallFameCard />
+                    <HallFameCard
+                        name={"Shrivasta G"}
+                        bio={`Hello everyone,
+                    My name is Sameer Kumar and I am a final year B.Tech student from Symbiosis Institute of Technology, Pune.                                                                                                              
+                    I recently got placed at Bajaj Finserv as a Data Scientist
+                    `}
+                        jobTitle="Bajaj Finserv"
+                        profileImage={require("../assets/persons/3.jpeg")}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <HallFameCard />
+                    <HallFameCard
+                        name={"Jay Prakash Bind"}
+                        bio={`Hello everyone,
+                    My name is Sameer Kumar and I am a final year B.Tech student from Symbiosis Institute of Technology, Pune.                                                                                                              
+                    I recently got placed at Bajaj Finserv as a Data Scientist
+                    `}
+                        jobTitle="Bajaj Finserv"
+                        profileImage={require("../assets/persons/4.jpeg")}
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <HallFameCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <HallFameCard />
+                    <HallFameCard
+                        name={"Aakash B"}
+                        bio={`Hello everyone,
+                    My name is Sameer Kumar and I am a final year B.Tech student from Symbiosis Institute of Technology, Pune.                                                                                                              
+                    I recently got placed at Bajaj Finserv as a Data Scientist
+                    `}
+                        jobTitle="Bajaj Finserv"
+                        profileImage={require("../assets/persons/62567c723c8eff001aa26bf5.jpeg")}
+                    />
                 </SwiperSlide>
             </Swiper>
             <p className="swiper-button-prev">

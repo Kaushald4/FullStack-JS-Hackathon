@@ -31,6 +31,8 @@
 }
 .avengers-card {
 
+        
+
     & .avengers-img {
         height: 140px;
         width: 140px;
@@ -85,6 +87,8 @@
         bottom: 0;
         border-radius: 10px;
         background-color: rgba(255,255,255,.2);
+        
+       
 
     & .avengers-img {
         height: 140px;
@@ -117,6 +121,17 @@
             & .social-icons {
                 position: relative;
                 bottom: -40px;
+
+                & i:first-child {
+                    color: #3b82f6;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+                & i:nth-child(2) {
+                    color: #ff3d00;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
             }
         }
 

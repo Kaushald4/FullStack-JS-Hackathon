@@ -26,7 +26,7 @@ function Hackathon() {
     return (
         <Marquee
             style={{ position: "absolute", left: 0, right: 0, zIndex: 1 }}
-            speed={20}
+            speed={50}
             pauseOnHover={true}
             children={HackathonCompanies()}
         ></Marquee>

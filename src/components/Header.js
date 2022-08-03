@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Hamburger from "./Hamburger";
 import "./header.scss";
 
 function Header() {
+    const showNavBar = () => {
+        const navbar = document.querySelector(".hamburger-overlay");
+        const navbarOverlay = document.querySelector(".overlay-blocker");
+        navbar.style.width = "300px";
+        navbarOverlay.style.width = "100vw";
+    };
+
     return (
         <div className="header d-flex">
+            <div className="order-2 hamburger-icon" onClick={showNavBar}>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div className="overlay-blocker"></div>
+            <div className="hamburger-overlay">
+                <Hamburger />
+            </div>
             <div className="logo">
                 <img
                     src={require("../assets/ineuron-logo.png")}
@@ -121,90 +136,130 @@ function Header() {
                             </ul>
                         </div>
 
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Mobile Development</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Blockchain</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Programming</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Cyber Security</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Testing</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Digital Marketing</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>CLOUD</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Devops</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>IOT</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>RPA</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>AR VR</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>SALESFORCE</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>Data Structure</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
-                        <li className="list-group-item sub-list-item d-flex justify-content-between">
-                            <p>System Design</p>
-                            <span>
-                                <i className="fa-solid fa-angle-right"></i>
-                            </span>
-                        </li>
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Mobile Development</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>BlockChain</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Programming</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Cyber Security</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Testing</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Digital Marketing</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>CLOUD</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Devops</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>IOT</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>RPA</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>AR VR</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>SALESFORCE</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>Data Structure</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
+                        <div>
+                            <li className="list-group-item sub-list-item d-flex justify-content-between">
+                                <p>System Design</p>
+                                <span>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
+                            </li>
+                        </div>
                     </ul>
                 </li>
                 <li className="list-group-item list-item">One Neuron</li>

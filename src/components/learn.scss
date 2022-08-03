@@ -1,13 +1,15 @@
 .program {
     margin-top: 70px;
+    display: flex;
     &-types {
-        
+        display: flex;
+        flex-direction: column;
     }
 
     margin-bottom: 50px;
 
     &-cards {
-        width: 800px;
+        width: 60vw;
         position: relative;
 
         & .swiper-button-next {
@@ -34,6 +36,7 @@
     
     &-card-wrapper {
         position: relative;
+        width: 300px;
     }
     
     &-card {
@@ -140,6 +143,50 @@
                     height: 100%;
                 }
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .program-cards {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 1037px) {
+    .program {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-cards {
+            width: 100vw;
+        }
+        & .swiper-button-next {
+            display: none;
+        }
+        & .swiper-button-prev {
+            display: none;
+        }
+
+        & .program-types {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+    }    
+}
+
+@media only screen and (max-width: 750px) {
+    .program-cards {
+        align-items: center;
+        justify-content: center;
+        & .community-program {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
