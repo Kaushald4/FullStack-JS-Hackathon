@@ -17,7 +17,6 @@ import TaxilaSvg from "./assets/institution/taxila.svg";
 import VitSvg from "./assets/institution/vit.svg";
 import DotPattern from "./assets/dot-pattern.svg";
 import IsoSvgPattern from "./assets/iso-9001-2015.svg";
-import AvenegrsSvg from "./assets/avengers2.svg";
 
 import Achievers from "./components/Achievers";
 import HallFame from "./components/HallFame";
