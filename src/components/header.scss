@@ -1,0 +1,194 @@
+.header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    z-index: -1;
+
+}
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    // background-color: rgba(255,255,255,.4);
+    padding: 0 110px;
+    z-index: 2;
+}
+
+.list {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: .9rem;
+    color: #000000;
+}
+.list-item {
+    font-family: "Inter";
+    cursor: pointer;
+}
+.list-item button {
+    font-family: "Inter";
+}
+
+.list {
+    color: #4c4c4c;
+    & .list-item:first-child {
+        position: relative;
+        padding: 20px 0;
+    }
+
+
+    & .list-item:first-child:hover .sub-list {
+        display: block;
+    }
+
+    .list-item:first-child .sub-list::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(40px);
+    }
+    & .list-item:first-child .sub-list {
+        position: absolute;
+        background-color: rgba(255,255,255,.1);
+        border: 2px solid #e8e8e855;
+        border-radius: 8px;
+        padding: 0;
+        width: 300px;
+        left: 0;
+        top: 50px;
+        box-shadow: 0 0 20px 4px rgba(0,0,0,.05);
+        text-transform: uppercase;
+        z-index: 10;
+        display: none;
+
+        & .sub-list-item {
+            padding: 5px 8px;
+            margin: 10px 20px;
+
+            & p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        & div:hover .sub-list-item {
+            background-color: rgba(255, 255, 255, 0.404);
+            border-radius: 4px;
+        }
+
+      
+        & div ul::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(40px);
+        }
+        & div ul {
+            position: absolute;
+            background-color: rgb(236, 236, 236,.5);
+            border: 2px solid #e8e8e855;
+            border-radius: 8px;
+            padding: 0;
+            width: 270px;
+            left: 0;
+            top: 0;
+            text-transform: uppercase;
+            z-index: 9999;
+            left: 278px;
+            display: none;
+
+            & li {
+                padding: 5px 10px;
+                margin: 5px 20px;
+            }
+
+            & li:hover {
+                background-color: rgb(246, 246, 246);
+                border-radius: 5px;
+            }
+        }
+        & div:hover ul {
+            display: block;
+        }
+    }
+
+   
+    & .list-item:nth-child(5) {
+        position: relative;
+        padding: 20px 0;
+    }
+    
+    & .list-item:nth-child(5):hover .sub-list {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .list-item:nth-child(5) .sub-list::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(40px);
+    }
+    & .list-item:nth-child(5) .sub-list {
+        position: absolute;
+        background-color: rgba(255,255,255,.1);
+        border: 2px solid #e8e8e855;
+        border-radius: 8px;
+        padding: 0;
+        width: 420px;
+        left: -100px;
+        top: 50px;
+        box-shadow: 0 0 20px 4px rgba(0,0,0,.05);
+        z-index: 10;
+        display: none;
+        font-size: .9rem    ;
+
+        & .sub-list-item {
+            padding: 12px 8px;
+            margin: 10px 10px;
+
+            & p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        & div .sub-list-item ul li {
+            padding: 5px 8px;
+            transition: transform .2s linear;
+        }
+        & div .sub-list-item ul li:hover {
+            background-color: rgba(255, 255, 255, 0.404);
+            border-radius: 4px;
+            transform: translateX(5px);
+        }
+
+      
+        
+    }
+
+    & .header-auth-btn {
+        background-color: transparent;
+        border: 1px solid #8039EA;
+        border-radius: 5px;
+        padding: 4px 10px;
+        color: #8039EA;
+        box-shadow: 0 0 20px 2px rgba(103,25,221,.08);
+        transition: background-color .2s linear, backdrop-filter .2s linear;
+
+        &:hover {
+            background-color: rgba(128, 57, 234, 0.8);
+            backdrop-filter: blur(10px);
+            color: #FFFFFF;
+        }
+    }
+
+}

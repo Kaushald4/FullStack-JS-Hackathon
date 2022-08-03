@@ -1,0 +1,40 @@
+.swiper-hall {
+    & .swiper-button-next {
+        cursor: pointer;
+        position: relative;
+        right: 40px;
+        background-color: #ffba31;
+        box-shadow: 0 0 10px 8px rgba(0,0,0,.08);
+        color: #FFFFFF;
+        padding: 4px 18px;
+        border-radius: 9px;
+        transition: box-shadow .2s linear;
+
+        &:hover {
+            box-shadow: 0 0 20px 15px rgba(0,0,0,.08); ;
+        }
+
+        & i {
+            font-size: 1.1rem;
+        }
+    }
+
+    & .swiper-button-prev {
+        cursor: pointer;
+        position: relative;
+        left: 40px;
+        background-color: #ffba31;
+        color: #FFFFFF;
+        padding: 4px 18px;
+        border-radius: 9px;
+        & i {
+            font-size: 1.1rem;
+        }
+
+        transition: box-shadow .2s linear;
+
+        &:hover {
+            box-shadow: 0 0 20px 15px rgba(0,0,0,.08); ;
+        }
+    }
+}
